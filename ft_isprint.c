@@ -6,15 +6,15 @@
 /*   By: mmoloi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 12:54:24 by mmoloi            #+#    #+#             */
-/*   Updated: 2019/06/01 09:16:39 by mmoloi           ###   ########.fr       */
+/*   Updated: 2019/06/10 10:43:28 by mmoloi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int		ft_isprint(int c)
 {
-	if ( c >= 40 && c <= 126)
+	if (c >= 32 && c <= 126)
 		return (1);
 	else
 		return (0);

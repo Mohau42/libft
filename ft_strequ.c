@@ -5,14 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmoloi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/02 15:40:31 by mmoloi            #+#    #+#             */
-/*   Updated: 2019/06/02 15:42:26 by mmoloi           ###   ########.fr       */
+/*   Created: 2019/06/10 16:21:53 by mmoloi            #+#    #+#             */
+/*   Updated: 2019/06/11 11:13:07 by mmoloi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int		ft_strequ(char const *s1, char const *s2)
+int		ft_strequ(char const s1, char const s2)
 {
-	return (ft_strcmp(s1, s2) ? 0 : 1);
+	if (s1 == s2)
+		return (1);
+	else
+		return (0);
 }

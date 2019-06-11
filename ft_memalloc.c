@@ -5,20 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmoloi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/01 11:09:53 by mmoloi            #+#    #+#             */
-/*   Updated: 2019/06/01 11:19:00 by mmoloi           ###   ########.fr       */
+/*   Created: 2019/06/11 13:03:17 by mmoloi            #+#    #+#             */
+/*   Updated: 2019/06/11 13:05:57 by mmoloi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-void		*ft_memalloc(size_t size)
+void	*ft_memalloc(size_t size)
 {
-	void	*m;
+	void *q;
 
-	m = mallc(size);
-	if (m == NULL)
+	q = malloc(size);
+	if (q == NULL)
 		return (NULL);
-	ft_bzero(m, size);
-	return (m);
+	ft_bzero(q, size);
+	return (q);
 }

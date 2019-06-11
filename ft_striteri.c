@@ -5,16 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmoloi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/02 15:49:29 by mmoloi            #+#    #+#             */
-/*   Updated: 2019/06/02 15:53:20 by mmoloi           ###   ########.fr       */
+/*   Created: 2019/06/11 11:31:39 by mmoloi            #+#    #+#             */
+/*   Updated: 2019/06/11 11:34:16 by mmoloi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned int	i;
+	size_t i;
 
 	i = 0;
 	while (s[i] != '\0')

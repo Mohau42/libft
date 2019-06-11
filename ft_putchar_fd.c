@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmoloi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/02 10:26:09 by mmoloi            #+#    #+#             */
-/*   Updated: 2019/06/02 10:36:46 by mmoloi           ###   ########.fr       */
+/*   Created: 2019/06/11 11:15:29 by mmoloi            #+#    #+#             */
+/*   Updated: 2019/06/11 11:16:29 by mmoloi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-void		ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+	write (fd, &c, 1);
 }

@@ -1,26 +1,40 @@
-/* ************************************************************************** */
+/* i************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmoloi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/01 09:28:06 by mmoloi            #+#    #+#             */
-/*   Updated: 2019/06/01 09:35:37 by mmoloi           ###   ########.fr       */
+/*   Created: 2019/06/10 11:44:34 by mmoloi            #+#    #+#             */
+/*   Updated: 2019/06/11 11:14:49 by mmoloi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-void		*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	char	*tmp;
+	char	*k;
+	char	*x;
+	size_t	i;
 
-	tmp = (char *)malloc(sizeof(char) *len);
-	if (tmp == NULL)
+	k = (char *)dst;
+	x = (char *)src;
+	i = 0;
+	if (!dst && !src)
 		return (NULL);
-	ft_memcpy(tmp, src, len);
-	ft_memcpy(dst, tmp, len);
-	free(tmp);
-	return (dst);
+	if (x < k)
+	{
+		while (n-- > 0)
+			k[n] = x[n];
+	}
+	else
+	{
+		while (i < n)
+		{
+			k[i] = x[i];
+			i++;
+		}
+	}
+	return (k);
 }
