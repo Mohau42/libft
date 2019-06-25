@@ -6,13 +6,13 @@
 /*   By: mmoloi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/22 14:52:34 by mmoloi            #+#    #+#             */
-/*   Updated: 2019/06/22 15:22:08 by mmoloi           ###   ########.fr       */
+/*   Updated: 2019/06/24 12:24:35 by mmoloi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_count(char const *s, char c)
+static int			ft_count(char const *s, char c)
 {
 	int		i;
 	int		counter;
@@ -33,7 +33,7 @@ static int	ft_count(char const *s, char c)
 	return (counter);
 }
 
-static	int		ft_lenwrd(const char *s, char c)
+static	int			ft_lenwrd(const char *s, char c)
 {
 	int		len;
 
@@ -46,11 +46,11 @@ static	int		ft_lenwrd(const char *s, char c)
 	return (len);
 }
 
-char		**ft_strsplit(const char *s, char c)
+char			**ft_strsplit(const char *s, char c)
 {
-	int 	j;
-	int		i;
-	char	**tab;
+	int			j;
+	int			i;
+	char		**tab;
 
 	i = 0;
 	if (!s || !c)

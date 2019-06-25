@@ -1,18 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmoloi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 12:55:05 by mmoloi            #+#    #+#             */
-/*   Updated: 2019/05/22 13:12:11 by mmoloi           ###   ########.fr       */
+/*   Created: 2019/06/14 10:15:31 by mmoloi            #+#    #+#             */
+/*   Updated: 2019/06/23 11:24:57 by mmoloi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_tolower(int c)
+#include "libft.h"
+
+char		*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	if ( c >= 65 && c <= 90)
-			c += 32;
-	return (c);
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	while (i < n && s1[i] != '\0')
+	{
+		j = 0;
+		while (i + j < n && s1[i + j] == s2[j] && s2[j] != '\0')
+			j++;
+		if (s2[j] == '\0')
+			return ((char *)s1 + i);
+		i++;
+	}
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: mmoloi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/14 10:51:57 by mmoloi            #+#    #+#             */
-/*   Updated: 2019/06/14 10:56:02 by mmoloi           ###   ########.fr       */
+/*   Updated: 2019/06/18 10:08:09 by mmoloi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ char	*ft_strchr(const char *s, int c)
 		i++;
 	}
 	if (!c && s[i] == '\0')
-		return((char *)s + i);
+		return ((char *)s + i);
 	return (NULL);
 }

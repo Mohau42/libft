@@ -6,7 +6,7 @@
 /*   By: mmoloi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 13:50:45 by mmoloi            #+#    #+#             */
-/*   Updated: 2019/06/12 13:54:44 by mmoloi           ###   ########.fr       */
+/*   Updated: 2019/06/25 11:30:29 by mmoloi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 void	ft_putendl(char const *s)
 {
-	ft_putstr (s);
-	
-	ft_putchar ('\n');
+	if (!s)
+		return ;
+	ft_putstr(s);
+	ft_putchar('\n');
 }

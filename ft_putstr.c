@@ -6,7 +6,7 @@
 /*   By: mmoloi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/01 11:36:35 by mmoloi            #+#    #+#             */
-/*   Updated: 2019/06/07 16:34:13 by mmoloi           ###   ########.fr       */
+/*   Updated: 2019/06/24 12:03:29 by mmoloi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void		ft_putstr(char const *s)
 	size_t	i;
 
 	i = 0;
+	if (!s)
+		return ;
 	while (s[i])
 	{
 		ft_putchar(s[i]);

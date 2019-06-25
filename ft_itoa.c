@@ -3,34 +3,61 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmoloi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: samofoke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/22 10:31:07 by mmoloi            #+#    #+#             */
-/*   Updated: 2019/06/22 10:45:42 by mmoloi           ###   ########.fr       */
+/*   Created: 2019/06/15 16:42:42 by samofoke          #+#    #+#             */
+/*   Updated: 2019/06/25 15:42:48 by mmoloi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+static int		get_digit(int n)
 {
-	char *str;
+	int					d;
+	unsigned long int	x;
+	unsigned int		ln;
 
-	if (!(str = (char *)malloc(sizeof(char) * 2)))
+	x = 1;
+	d = 0;
+	ln = (n < 0 ? -n : n);
+	if (n <= 0)
+		d++;
+	while (x <= ln)
+	{
+		x *= 10;
+		d++;
+	}
+	return (d);
+}
+
+static char		*get_num(char *sn, int n, int len)
+{
+	int				i;
+	unsigned int	lns;
+
+	i = len;
+	lns = (n < 0 ? -n : n);
+	while (i--)
+	{
+		if (i == 0 && n < 0)
+			sn[i] = '-';
+		else
+			sn[i] = (lns % 10) + 48;
+		lns /= 10;
+	}
+	return (sn);
+}
+
+char			*ft_itoa(int n)
+{
+	char		*sn;
+	int			num;
+
+	num = get_digit(n);
+	sn = ft_strnew(num);
+	if (sn == NULL)
 		return (NULL);
-	if (n == -2147483648)
-		return (ft_strcpy(str, "-2147483648"));
-	if (n < 0)
-	{
-		str[0] = '-';
-		str[1] = '\0';
-		str = ft_strjoin(str, ft_itoa(-n));
-	}
-	else if (n >= 10)
-		str = ft_strjoin(ft_itoa(n / 10), ft_itoa(n % 10));
-	else if (n < 10 && n >= 0)
-	{
-		str[0] = n + '0';
-	}
-	return (str);
+	sn = get_num(sn, n, num);
+	return (sn);
 }

@@ -1,3 +1,4 @@
+# 
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
@@ -6,7 +7,7 @@
 #    By: mmoloi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/07 14:46:45 by mmoloi            #+#    #+#              #
-#    Updated: 2019/06/11 12:09:45 by mmoloi           ###   ########.fr        #
+#    Updated: 2019/06/17 13:47:23 by mmoloi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +39,35 @@ SRC = ft_isdigit.c \
       ft_strmap.c \
       ft_strmapi.c \
       ft_strncmp.c \
-      ft_strcmp.c
+      ft_strcmp.c \
+      ft_memalloc.c \
+      ft_bzero.c \
+      ft_strnequ.c \
+      ft_memccpy.c \
+      ft_strdup.c \
+      ft_memdel.c \
+      ft_putendl.c \
+      ft_strnew.c \
+      ft_strnstr.c \
+      ft_strdel.c \
+      ft_strclr.c \
+      ft_strcat.c \
+      ft_strchr.c \
+      ft_strstr.c \
+      ft_atoi.c \
+      ft_strjoin.c \
+      ft_strlcat.c \
+      ft_strsub.c \
+      ft_strncat.c \
+      ft_strrchr.c \
+      ft_putstr_fd.c \
+      ft_putendl_fd.c \
+      ft_putnbr.c \
+      ft_putnbr_fd.c \
+      ft_strtrim.c \
+      ft_itoa.c \
+      ft_strsplit.c
+      
 
 OBJ = $(SRC:.c=.o)
 

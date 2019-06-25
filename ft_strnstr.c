@@ -3,30 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmoloi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: samofoke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/14 10:15:31 by mmoloi            #+#    #+#             */
-/*   Updated: 2019/06/22 10:04:54 by mmoloi           ###   ########.fr       */
+/*   Created: 2019/05/23 09:57:50 by samofoke          #+#    #+#             */
+/*   Updated: 2019/06/25 16:18:29 by mmoloi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strnstr(const char *s1, const char *s2, size_t n)
+char	*ft_strnstr(const char *str, const char *substr, size_t len)
 {
 	size_t	i;
-	size_t	j;
+	size_t	cnt;
 
 	i = 0;
-	if (s1 == NULL || s2 == NULL)
-		return (NULL);
-	while (i < n && s1[i] != '\0')
+	if (!*substr)
+		return ((char*)str);
+	while (str[i] != '\0' && i < len)
 	{
-		j = 0;
-		while (i + j < n && s1[i + j] == s2[j] && s2[j] != '\0')
-			j++;
-		if (s2[j] == '\0')
-			return ((char *)s1 + i);
+		cnt = 0;
+		while (substr[cnt])
+		{
+			if (substr[cnt] == str[i + cnt])
+				cnt++;
+			else
+				break ;
+		}
+		if (!substr[cnt] && len >= i + cnt)
+			return ((char*)(str + i));
 		i++;
 	}
 	return (NULL);

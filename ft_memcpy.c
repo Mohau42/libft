@@ -6,7 +6,7 @@
 /*   By: mmoloi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 09:03:51 by mmoloi            #+#    #+#             */
-/*   Updated: 2019/06/10 12:56:35 by mmoloi           ###   ########.fr       */
+/*   Updated: 2019/06/18 10:11:24 by mmoloi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
-	if (!dst && !src )
-		return(NULL);
+	if (!dst && !src)
+		return (NULL);
 	k = (char *)dst;
 	x = (char *)src;
 	while (i < n)
