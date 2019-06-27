@@ -6,7 +6,7 @@
 /*   By: mmoloi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/22 14:52:34 by mmoloi            #+#    #+#             */
-/*   Updated: 2019/06/24 12:24:35 by mmoloi           ###   ########.fr       */
+/*   Updated: 2019/06/27 16:16:48 by mmoloi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static	int			ft_lenwrd(const char *s, char c)
 	return (len);
 }
 
-char			**ft_strsplit(const char *s, char c)
+char				**ft_strsplit(const char *s, char c)
 {
 	int			j;
 	int			i;
